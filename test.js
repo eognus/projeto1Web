@@ -37,6 +37,19 @@ describe('###Tests for Unauthenticated Routes', async(t) => {
     });
 
     describe('##Bad Requests', async(t) => {
+        test('# GET /categories/:id/product', async(t) => {
+            const app = await build(options);
+
+            t.after(async() => {
+                await app.close();
+            });
+            const response = await app.inject({
+                method: 'GET',
+                url: '/categories/:id/product'
+            });
+
+            equal(response.statusCode, 400);
+        });
 
     });
 });

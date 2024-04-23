@@ -23,3 +23,9 @@ export const ALREADY_EXISTS = createError(
     'This resource already exists in database.',
     412
 );
+
+export const USER_FORBIDDEN = createError(
+    'USER_FORBIDDEN', 
+    'User is not authorized.', 
+    403
+);

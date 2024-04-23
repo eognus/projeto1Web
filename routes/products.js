@@ -29,7 +29,8 @@ export default async function products(app, options) {
             }
         },
         config: {
-            requireAuthentication: true
+            requireAuthentication: true,
+            requireAuthorization: true
         }
     }, async (request, reply) => {
         let product = request.body;
@@ -48,7 +49,8 @@ export default async function products(app, options) {
     
     app.delete('/products/:id', {
         config: {
-            requireAuthentication: true
+            requireAuthentication: true,
+            requireAuthorization: true
         }
     }, async (request, reply) => {
         let id =  request.params.id;
@@ -60,7 +62,8 @@ export default async function products(app, options) {
 
     app.put('/products/:id', {
         config: {
-            requireAuthentication: true
+            requireAuthentication: true,
+            requireAuthorization: true
         }
     }, async (request, reply) => {
         let id =  request.params.id;

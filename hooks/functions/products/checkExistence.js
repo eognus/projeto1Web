@@ -1,5 +1,5 @@
 import { ALREADY_EXISTS } from "../../../libs/errors.js";
-export const checkExistence = (app) => async (request, reply) => {
+export const checkproductExistence = (app) => async (request, reply) => {
     const products = app.mongo.db.collection('products');
 
     let product = request.body;
